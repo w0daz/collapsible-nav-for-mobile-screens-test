@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapsible Nav For Mobile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <main class="main">
+    <section>
+
+        <div class="navbar">
+            <div class="navlink logo">
+                <img src="logo.svg" alt="main-logo">
+            </div>
+            <div class="navlink toggle">
+                <ion-icon name="menu"></ion-icon>
+            </div>
+            <nav class="navleft navitems">
+                <div class="navlink"><a href="#">Home</a></div>
+                <div class="navlink"><a href="#">Contact</a></div>
+                <div class="navlink"><a href="#">About</a></div>
+            </nav>
+
+            <!-- <div class="navright navitems">
+                <div class="navlink">about</div>
+                <div class="navlink">contact</div>
+            </div> -->
+        </div>
+
+    </section>
+
+   </main> 
+   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+   <script>
+    function classToggle() {
+  const navs = document.querySelectorAll('.navitems')
+  
+  navs.forEach(nav => nav.classList.toggle('navbartoggleshow'));
+}
+
+document.querySelector('.toggle')
+  .addEventListener('click', classToggle);
+   </script>
+</body>
+</html>

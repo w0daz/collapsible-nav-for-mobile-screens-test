@@ -1,0 +1,125 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+ul,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture {
+max-width: 100%;
+display: block;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background-color: #fff;
+    color: hsl(192, 100%, 9%);
+    transition: 0.3s;
+}
+
+.main {
+    max-width: 90rem;
+
+}
+
+.navbar {
+    background-color: hsl(192, 97%, 31%);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+.navlink > img {
+    width: 10rem;
+}
+
+.navitems {
+    display: flex;
+    flex-direction: column;
+    column-gap: 2rem;
+    /* visibility: hidden; */
+    display: none;
+    align-items: end;
+    padding-top: 1rem;
+    font-size: 1.2em;
+}
+
+.navright {
+    margin-left: 0;
+}
+
+.toggle {
+    font-size: 1.6em;
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+    cursor: pointer;
+}
+
+.navbartoggleshow {
+    display: flex;
+}
+
+.navlink > a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navlink > a:hover {
+    cursor: pointer;
+    color: aqua;
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar, .navitems {
+        flex-direction: row;
+    }
+
+    .navbar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navright {
+        margin-left: auto;
+    }
+
+    .navitems {
+        display: flex;
+        margin-left: auto;
+        padding-top: 0;
+        /* visibility: visible; */
+    }
+
+    .toggle {
+        display: none;
+    }
+}
